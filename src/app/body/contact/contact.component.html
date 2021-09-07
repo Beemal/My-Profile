@@ -1,0 +1,93 @@
+ <!-- Contact Section-->
+ <section class="page-section" #contact>
+    <div class="container">
+        <!-- Contact Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="bi-star-fill"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Contact Section Form-->
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+                <div class="alert alert-success d-none form-success-msg" role="alert">
+                    Email Sent Successfully
+                </div>
+
+                <div class="alert alert-warning d-none form-warning-msg" role="alert">
+                    Fill the form fields to submit
+                </div>
+
+                  <form class="contact-us-form" [formGroup]="userForm" (ngSubmit)="onSubmit()" (click)="onFormClick()" novalidate>
+                    <div class="form-floating">
+                        <input class="form-control" id="inputName" type="text" placeholder="Enter your name..." name="fname" formControlName="name" />
+                        <label for="inputName">Name</label>
+
+                      <div *ngIf="getControl.name.touched && getControl.name.invalid" class="text-danger">
+                        <div *ngIf="getControl.name.errors?.required">Name is required.</div>
+                        <div *ngIf="getControl.name.errors?.minlength">Minimum 2 characters are required.</div>
+                        <div *ngIf="getControl.name.errors?.maxlength">Maximum of 26 characters allowed.</div>
+                    </div>
+                    </div>
+                  
+                    <div class="form-floating">
+                        <input class="form-control" id="inputEmail" type="email" placeholder="Enter your email..." name="email"  formControlName="email" />
+                        <label for="inputEmail">Email address</label>
+                    
+                        <div *ngIf="getControl.email.touched && getControl.email.invalid" class="text-danger">
+                        <div *ngIf="getControl.email.errors?.required">Email is required.</div>
+                        <div *ngIf="getControl.email.errors?.maxlength">Maximum of 65 characters allowed.</div>
+                        <div *ngIf="getControl.email.errors?.email">Email seems invalid.</div>
+                      </div>
+                    </div>
+                  
+                    <div class="form-floating">
+                        <input class="form-control" id="inputPhone" type="tel" placeholder="Enter your phone number..." name="phone" formControlName="phone" mask="(000) 000-0000"/>
+                        <label for="inputPhone">Phone Number</label>
+                    
+                        <div *ngIf="getControl.phone.touched && getControl.phone?.invalid" class="text-danger">
+                        <div *ngIf="getControl.phone.errors?.required">Phone is required.</div>
+                        <div *ngIf="getControl.phone.errors?.pattern">Follow Phone format: 123-123-1234</div>
+                      </div>
+                    </div>
+                  
+                    <div class="form-floating">
+                        <textarea class="form-control" id="inputMessage" placeholder="Enter your message here..." style="height: 12rem" name="message" formControlName="message"></textarea>
+                        <label for="inputMessage">Message</label>
+                    
+                        <div *ngIf="getControl.message.touched && getControl.message?.invalid" class="text-danger">
+                        <div *ngIf="getControl.message.errors?.required">Message is required.</div>
+                        <div *ngIf="getControl.message.errors?.maxlength">Maximum of 600 characters allowed.</div>
+                      </div>
+                    </div>
+                    <br />
+                    <button class="btn btn-primary btn-xl" type="submit">Send</button>
+                
+                  </form>
+                  <!-- <form #f="ngForm" (ngSubmit)="onSubmit(f)" (click)="onFormClick()" ngNativeValidate>
+                    <div class="form-floating">
+                        <input class="form-control" id="inputName" type="text" placeholder="Enter your name..." name="fname" ngModel required/>
+                        <label for="inputName">Name</label>
+                    </div>
+                
+                    <div class="form-floating">
+                        <input class="form-control" id="inputEmail" type="email" placeholder="Enter your email..." name="email" ngModel required />
+                        <label for="inputEmail">Email address</label>
+                    </div>
+                    <div class="form-floating">
+                        <input class="form-control" id="inputPhone" type="tel" placeholder="Enter your phone number..." name="phone" ngModel required/>
+                        <label for="inputPhone">Phone Number</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control" id="inputMessage" placeholder="Enter your message here..." style="height: 12rem" name="message" ngModel></textarea>
+                        <label for="inputMessage">Message</label>
+                    </div>
+                    <br />
+                    <button class="btn btn-primary btn-xl" type="submit">Send</button>
+                </form> -->
+            </div>
+        </div>
+    </div>
+</section>
