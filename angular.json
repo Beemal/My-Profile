@@ -10,7 +10,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "less"
+          "style": "css"
         },
         "@schematics/angular:application": {
           "strict": true
@@ -34,7 +34,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "src/assets/styles/theme.css",
+              "src/assets/styles/spacing.css",
+              "src/styles.css"
             ],
             "scripts": []
           },

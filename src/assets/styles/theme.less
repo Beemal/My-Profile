@@ -1,0 +1,80 @@
+// Theme variables
+@theme-blue: #2D00F7;
+@theme-purple: #8E2DE2;
+@theme-primary: @theme-blue;
+@theme-secondary: @theme-purple;
+
+// Mixins
+.gradient() {
+    background: linear-gradient(135deg, @theme-blue 0%, @theme-purple 100%);
+}
+
+.glow() {
+    box-shadow: 0 0 15px rgba(45, 0, 247, 0.5);
+}
+
+// Custom buttons
+.btn {
+    border-radius: 2rem;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+    
+    &.btn-primary {
+        .gradient();
+        border: none;
+        .glow();
+        
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(45, 0, 247, 0.5), 0 5px 15px rgba(0,0,0,0.3);
+        }
+    }
+
+    &.btn-outline-light {
+        border: 2px solid #fff;
+        
+        &:hover {
+            .gradient();
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+    }
+}
+
+// Custom masthead
+.masthead {
+    .gradient();
+    padding-top: calc(6rem + 74px);
+    padding-bottom: 6rem;
+
+    .masthead-heading {
+        font-size: 2.75rem;
+        line-height: 2.75rem;
+        background: linear-gradient(90deg, #FFFFFF 0%, #E0E0E0 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 2rem;
+    }
+
+    .tech-stack {
+        font-size: 1.25rem;
+        margin: 1.5rem 0;
+        letter-spacing: 1px;
+    }
+
+    .credentials {
+        margin-top: 2rem;
+        
+        .badge {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            transition: transform 0.2s ease;
+            
+            &:hover {
+                transform: translateY(-2px);
+            }
+        }
+    }
+}

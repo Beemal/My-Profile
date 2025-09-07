@@ -1,0 +1,56 @@
+/* Section Spacing */
+.page-section {
+    padding: 8rem 0 !important;
+}
+
+.page-section + .page-section {
+    margin-top: 2rem;
+}
+
+/* Section headings spacing */
+.page-section-heading {
+    margin-bottom: 3rem !important;
+}
+
+/* Portfolio spacing */
+.portfolio .portfolio-item {
+    margin-bottom: 3rem !important;
+}
+
+/* About section spacing */
+.about-section {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+/* Contact section spacing */
+.contact-section {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+/* Masthead spacing */
+.masthead {
+    padding-top: calc(8rem + 74px) !important;
+    padding-bottom: 8rem !important;
+}
+
+/* Skills list spacing */
+.skills-list {
+    margin-top: 2rem !important;
+}
+
+.skills-list li {
+    margin-bottom: 1.5rem !important;
+}
+
+/* Footer spacing */
+.footer {
+    padding: 5rem 0 !important;
+}
+
+/* Section dividers */
+.section-divider {
+    margin: 4rem 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}

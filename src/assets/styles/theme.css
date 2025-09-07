@@ -1,0 +1,56 @@
+/* Section Spacing */
+.page-section {
+    padding: 8rem 0;  /* Increased from 6rem to 8rem */
+}
+
+/* Add more space between sections */
+.page-section + .page-section {
+    margin-top: 2rem;
+}
+
+/* Section headings spacing */
+.page-section-heading {
+    margin-bottom: 3rem;  /* Increased from 2rem to 3rem */
+}
+
+/* Portfolio spacing */
+.portfolio .portfolio-item {
+    margin-bottom: 3rem;  /* Increased from 1.5rem to 3rem */
+}
+
+/* About section spacing */
+.about-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Contact section spacing */
+.contact-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Masthead spacing */
+.masthead {
+    padding-top: calc(8rem + 74px); /* Increased from 6rem to 8rem */
+    padding-bottom: 8rem;  /* Increased from 6rem to 8rem */
+}
+
+/* Skills list spacing */
+.skills-list {
+    margin-top: 2rem;
+}
+.skills-list li {
+    margin-bottom: 1.5rem;  /* Increased from 0.75rem to 1.5rem */
+}
+
+/* Footer spacing */
+.footer {
+    padding: 5rem 0;  /* Increased padding */
+}
+
+/* Add dividers between sections */
+.section-divider {
+    margin: 4rem 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
